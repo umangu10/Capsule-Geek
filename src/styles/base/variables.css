@@ -1,0 +1,98 @@
+:root {
+  /* Base Colors - Light theme */
+  --bg-primary: #ffffff;    /* Pure white */
+  --bg-secondary: #f8fafc;  /* Light gray-blue */
+  --bg-tertiary: #f1f5f9;   /* Slightly darker gray-blue */
+  
+  /* Text Colors */
+  --text-primary: #1e293b;   /* Dark blue-gray */
+  --text-secondary: #475569; /* Medium blue-gray */
+  --text-muted: #64748b;     /* Light blue-gray */
+  
+  /* Primary Accent Colors */
+  --accent-primary: #2563eb;   /* Bright blue */
+  --accent-secondary: #7c3aed; /* Purple */
+  --accent-tertiary: #0ea5e9;  /* Sky blue */
+  
+  /* Secondary Accent Colors */
+  --accent-purple: #8b5cf6;    /* Lighter purple */
+  --accent-yellow: #eab308;    /* Gold */
+  --accent-blue: #3b82f6;      /* Royal blue */
+  --accent-green: #22c55e;     /* Emerald */
+  --accent-red: #ef4444;       /* Red */
+  
+  /* Gradients */
+  --gradient-cyber: linear-gradient(135deg, #2563eb, #22c55e);
+  --gradient-neon: linear-gradient(135deg, #7c3aed, #3b82f6);
+  --gradient-dark: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  --gradient-matrix: linear-gradient(90deg, #2563eb, #22c55e, #7c3aed);
+  
+  /* Glow Effects - Softer for light theme */
+  --glow-blue: 0 0 10px rgba(37, 99, 235, 0.2),
+               0 0 20px rgba(37, 99, 235, 0.1),
+               0 0 30px rgba(37, 99, 235, 0.05);
+               
+  --glow-purple: 0 0 10px rgba(124, 58, 237, 0.2),
+                 0 0 20px rgba(124, 58, 237, 0.1),
+                 0 0 30px rgba(124, 58, 237, 0.05);
+                
+  --glow-sky: 0 0 10px rgba(14, 165, 233, 0.2),
+              0 0 20px rgba(14, 165, 233, 0.1),
+              0 0 30px rgba(14, 165, 233, 0.05);
+  
+  /* Borders & Cards */
+  --border-primary: rgba(37, 99, 235, 0.2);
+  --border-secondary: rgba(124, 58, 237, 0.2);
+  --card-glow: 0 4px 12px rgba(37, 99, 235, 0.1);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+  
+  /* Overlays */
+  --overlay-light: rgba(255, 255, 255, 0.9);
+  --overlay-dark: rgba(30, 41, 59, 0.05);
+  --overlay-gradient: linear-gradient(180deg, 
+                     rgba(255, 255, 255, 0) 0%,
+                     rgba(255, 255, 255, 0.9) 100%);
+}
+
+/* Utility Classes */
+.text-gradient {
+  background: var(--gradient-cyber);
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient {
+  background: var(--gradient-dark);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-primary);
+}
+
+/* Animation Keyframes */
+@keyframes softPulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+@keyframes gentleBorder {
+  0% { border-color: var(--accent-primary); }
+  50% { border-color: var(--accent-secondary); }
+  100% { border-color: var(--accent-primary); }
+}
+
+@keyframes subtleGlow {
+  0% { box-shadow: var(--glow-blue); }
+  50% { box-shadow: var(--glow-purple); }
+  100% { box-shadow: var(--glow-blue); }
+} 

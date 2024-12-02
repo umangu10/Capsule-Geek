@@ -1,0 +1,151 @@
+.payment-container {
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.payment-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.plan-summary {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.plan-summary h2 {
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.selected-plan {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.selected-plan h3 {
+  color: #4CAF50;
+  margin-bottom: 0.5rem;
+}
+
+.plan-price {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+}
+
+.plan-price .period {
+  color: #666;
+  font-size: 1rem;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.payment-summary {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  color: #666;
+}
+
+.summary-row.total {
+  border-top: 1px solid #ddd;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.btn-pay {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-pay:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+}
+
+.secure-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.lock-icon {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .payment-card {
+    padding: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+} 

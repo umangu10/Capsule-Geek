@@ -1,0 +1,90 @@
+.cyber-button {
+  position: relative;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* Variants */
+.cyber-button.primary {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+}
+
+.cyber-button.secondary {
+  background: transparent;
+  border: 1px solid var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.cyber-button.danger {
+  background: var(--accent-red);
+  color: var(--bg-primary);
+}
+
+/* Sizes */
+.cyber-button.small {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+}
+
+.cyber-button.medium {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+.cyber-button.large {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+/* Full Width */
+.cyber-button.full-width {
+  width: 100%;
+}
+
+/* Loading State */
+.button-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.loader-dot {
+  width: 4px;
+  height: 4px;
+  background: currentColor;
+  border-radius: 50%;
+  animation: dotPulse 1s infinite;
+}
+
+.loader-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes dotPulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Hover & Focus States */
+.cyber-button:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow-blue);
+}
+
+.cyber-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+} 

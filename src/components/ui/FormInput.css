@@ -1,0 +1,64 @@
+.form-field {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: var(--glow-blue);
+}
+
+.input-wrapper.error .form-input {
+  border-color: var(--accent-red);
+}
+
+.input-wrapper.success .form-input {
+  border-color: var(--accent-green);
+}
+
+.input-icon {
+  position: absolute;
+  right: 1rem;
+  color: var(--accent-red);
+}
+
+.input-wrapper.success .input-icon {
+  color: var(--accent-green);
+}
+
+.helper-text {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.helper-text.error {
+  color: var(--accent-red);
+} 

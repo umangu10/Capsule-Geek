@@ -1,0 +1,10 @@
+:root {
+  --bg-primary: #ffffff; /* White background */
+  --bg-secondary: #f8f9fa; /* Light gray */
+  --text-primary: #333333; /* Dark text */
+  --text-secondary: #666666; /* Medium gray text */
+  --accent-primary: #007bff; /* Blue */
+  --accent-secondary: #6c757d; /* Gray */
+  --border-color: #dee2e6; /* Light border */
+  --shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow */
+} 

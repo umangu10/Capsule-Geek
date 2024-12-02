@@ -1,0 +1,37 @@
+
+.price-container {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.free-badge {
+  background: var(--accent-green);
+  color: var(--bg-primary);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+
+.btn-enroll {
+  display: inline-block;
+  width: 100%;
+  padding: 0.8rem;
+  text-align: center;
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn-enroll:hover {
+  background: var(--accent-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--glow-blue);
+} 

@@ -1,0 +1,22 @@
+.enrollment-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border-primary);
+}
+
+.enrollment-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.enrollment-info {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-top: 1rem;
+  font-size: 0.9rem;
+} 

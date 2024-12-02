@@ -1,0 +1,125 @@
+{
+  "users": [
+    {
+      "id": "1730491761667",
+      "username": "fawkess",
+      "email": "umang.sarasway633@gmail.com",
+      "password": "Umang1234",
+      "stats": {
+        "coursesEnrolled": 0,
+        "coursesCompleted": 0,
+        "totalHoursLearned": 0,
+        "certificatesEarned": 0,
+        "points": 0
+      },
+      "rank": "Beginner",
+      "level": 1,
+      "levelProgress": 0,
+      "createdAt": "2024-11-01T20:09:21.667Z"
+    }
+  ],
+  "courses": [
+    {
+      "id": "1",
+      "title": "Advanced Cybersecurity: Threat Detection & Response",
+      "description": "Master the art of cybersecurity with hands-on experience in threat detection, analysis, and incident response.",
+      "difficulty": "Intermediate",
+      "duration": "8 weeks",
+      "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
+      "category": "fundamentals",
+      "modules": 12,
+      "students": "10,543",
+      "rating": 4.8,
+      "lessons": [
+        {
+          "id": "1",
+          "title": "Understanding Cybersecurity Basics"
+        },
+        {
+          "id": "2",
+          "title": "Common Security Threats"
+        }
+      ],
+      "totalLessons": 2,
+      "prerequisites": [
+        "Basic understanding of networking concepts",
+        "Familiarity with operating systems",
+        "Basic programming knowledge"
+      ],
+      "price": {
+        "amount": 199.99,
+        "original": 299.99,
+        "discount": "33% off"
+      }
+    },
+    {
+      "id": "2",
+      "title": "Web Application Security",
+      "description": "Master web security concepts, including XSS, CSRF, SQL injection, and secure coding practices.",
+      "difficulty": "Intermediate",
+      "duration": "10 weeks",
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
+      "category": "web",
+      "modules": 15,
+      "students": "8,721",
+      "rating": 4.9,
+      "lessons": [
+        {
+          "id": "1",
+          "title": "Web Security Fundamentals"
+        },
+        {
+          "id": "2",
+          "title": "Common Web Vulnerabilities"
+        }
+      ],
+      "totalLessons": 2,
+      "prerequisites": [
+        "Basic web development knowledge",
+        "Understanding of HTTP protocol",
+        "JavaScript fundamentals"
+      ],
+      "price": {
+        "amount": 249.99,
+        "original": 349.99,
+        "discount": "28% off"
+      }
+    },
+    {
+      "id": "3",
+      "title": "Network Penetration Testing",
+      "description": "Advanced network security and penetration testing techniques for ethical hackers.",
+      "difficulty": "Advanced",
+      "duration": "12 weeks",
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+      "category": "network",
+      "modules": 18,
+      "students": "6,932",
+      "rating": 4.7,
+      "lessons": [
+        {
+          "id": "1",
+          "title": "Network Security Basics"
+        },
+        {
+          "id": "2",
+          "title": "Penetration Testing Methodology"
+        }
+      ],
+      "totalLessons": 2,
+      "prerequisites": [
+        "Strong networking knowledge",
+        "Basic scripting skills",
+        "Understanding of security tools",
+        "Linux fundamentals"
+      ],
+      "price": {
+        "amount": 299.99,
+        "original": 399.99,
+        "discount": "25% off"
+      }
+    }
+  ],
+  "enrollments": [],
+  "activities": []
+} 

@@ -1,0 +1,91 @@
+/* ... previous styles ... */
+
+/* Plan Cards - Updated sizes and spacing */
+.plan-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.5rem;  /* Reduced from 2rem */
+  width: 280px;     /* Reduced from 320px */
+  min-height: fit-content;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Plan Headers - Reduced spacing */
+.plan-header {
+  text-align: center;
+  margin-bottom: 1.5rem;  /* Reduced from 2rem */
+  padding-bottom: 1.5rem; /* Reduced from 2rem */
+  border-bottom: 1px solid var(--card-border);
+}
+
+.plan-header h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;     /* Reduced from 2rem */
+  color: var(--text-primary);
+  margin-bottom: 0.75rem; /* Reduced from 1rem */
+  letter-spacing: 1px;
+}
+
+/* Features List - Adjusted spacing */
+.plan-features {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;          /* Reduced from 1rem */
+  margin: 1.5rem 0;      /* Reduced from 2rem */
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;          /* Reduced from 1rem */
+  color: var(--text-secondary);
+  font-size: 1rem;       /* Reduced from 1.1rem */
+  font-family: 'Rajdhani', sans-serif;
+  letter-spacing: 0.5px;
+  padding: 0.25rem 0;    /* Reduced from 0.5rem */
+}
+
+/* Button Styles - Adjusted size */
+.plan-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 0.875rem;     /* Reduced from 1rem */
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1rem;       /* Reduced from 1.1rem */
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+/* Responsive Design - Updated breakpoints */
+@media (max-width: 1200px) {
+  .plans-container {
+    gap: 1.5rem;         /* Reduced from 2rem */
+    padding: 0.5rem;
+  }
+  
+  .plan-card {
+    width: 260px;        /* Reduced from 300px */
+  }
+}
+
+@media (max-width: 900px) {
+  .plan-card {
+    width: 100%;
+    max-width: 300px;
+    min-height: auto;
+  }
+}
+
+/* ... rest of the styles remain the same ... */ 

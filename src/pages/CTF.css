@@ -1,0 +1,590 @@
+/* src/pages/CTF.css */
+.ctf-page {
+  padding: 2rem;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.ctf-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 4rem 2rem;
+  background: var(--bg-secondary);
+  border-radius: 20px;
+  border: 1px solid var(--border-primary);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.ctf-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-cyber);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-tertiary);
+  color: var(--accent-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--accent-primary);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.trophy-icon {
+  font-size: 1.2rem;
+  color: var(--accent-secondary);
+}
+
+.ctf-hero h1 {
+  font-size: 3.5rem;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: var(--text-glow);
+}
+
+.ctf-hero p {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  font-family: 'Share Tech Mono', monospace;
+  margin-bottom: 2rem;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-tertiary);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-primary);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-family: 'Share Tech Mono', monospace;
+  margin-top: 0.5rem;
+}
+
+.ctf-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.category-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.category-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-cyber);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.category-card:hover::before {
+  opacity: 0.1;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--glow-blue);
+}
+
+.category-icon {
+  font-size: 2.5rem;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.category-card h3 {
+  color: var(--text-primary);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  position: relative;
+}
+
+.category-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+.ctf-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.search-bar input {
+  padding: 0.8rem 1.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  color: var(--text-primary);
+  width: 300px;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: var(--glow-blue);
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.8rem 1.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  color: var(--text-primary);
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Share Tech Mono', monospace;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+  border-color: var(--accent-primary);
+  box-shadow: var(--glow-blue);
+}
+
+.ctf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.ctf-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctf-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-primary);
+  box-shadow: var(--glow-blue);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.ctf-card h3 {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.ctf-card p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.tag {
+  background: var(--bg-tertiary);
+  color: var(--accent-primary);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-family: 'Share Tech Mono', monospace;
+  border: 1px solid var(--border-primary);
+}
+
+.ctf-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.9rem;
+}
+
+.ctf-points {
+  color: var(--accent-secondary);
+  font-weight: bold;
+}
+
+.ctf-difficulty {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.ctf-difficulty.easy {
+  background: var(--success-bg);
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+
+.ctf-difficulty.medium {
+  background: var(--warning-bg);
+  color: var(--warning);
+  border: 1px solid var(--warning);
+}
+
+.ctf-difficulty.hard {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border: 1px solid var(--danger);
+}
+
+.solve-count {
+  color: var(--text-secondary);
+}
+
+.ctf-leaderboard {
+  margin-top: 4rem;
+  padding: 2rem;
+  background: var(--bg-secondary);
+  border-radius: 20px;
+  border: 1px solid var(--border-primary);
+}
+
+.ctf-leaderboard h2 {
+  color: var(--text-primary);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.leaderboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.leaderboard-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--bg-tertiary);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-primary);
+  transition: all 0.3s ease;
+}
+
+.leaderboard-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-primary);
+  box-shadow: var(--glow-blue);
+}
+
+.rank {
+  font-size: 2rem;
+  font-weight: bold;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.player-info h4 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.player-info p {
+  color: var(--accent-secondary);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .ctf-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .filter-buttons {
+    justify-content: center;
+  }
+
+  .ctf-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctf-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .category-card {
+    padding: 1.5rem;
+  }
+
+  .leaderboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.difficulty-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.difficulty-section {
+  background: var(--bg-secondary);
+  border-radius: 20px;
+  border: 1px solid var(--border-primary);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.difficulty-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-cyber);
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.section-title {
+  color: var(--text-primary);
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Orbitron', sans-serif;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.challenges-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.challenge-card {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.challenge-card:hover {
+  transform: translateX(10px);
+  border-color: var(--accent-primary);
+  box-shadow: var(--glow-blue);
+}
+
+.challenge-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.challenge-header h3 {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.difficulty-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.difficulty-badge.easy {
+  background: var(--success-bg);
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+
+.difficulty-badge.medium {
+  background: var(--warning-bg);
+  color: var(--warning);
+  border: 1px solid var(--warning);
+}
+
+.difficulty-badge.hard {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border: 1px solid var(--danger);
+}
+
+.challenge-description {
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+
+.challenge-footer {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.points {
+  color: var(--accent-secondary);
+  font-weight: bold;
+}
+
+.solves {
+  color: var(--text-secondary);
+}
+
+.start-btn {
+  margin-left: auto;
+  padding: 0.4rem 1rem;
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 6px;
+  font-family: 'Share Tech Mono', monospace;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.start-btn:hover {
+  background: var(--accent-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--glow-blue);
+}
+
+.search-bar {
+  position: relative;
+  flex: 1;
+  max-width: 500px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+}
+
+.search-bar input {
+  padding-left: 3rem;
+}
+
+.filter-icon {
+  color: var(--text-secondary);
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .challenge-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .challenge-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .start-btn {
+    width: 100%;
+    margin-left: 0;
+  }
+}
